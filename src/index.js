@@ -30,7 +30,15 @@ const J2A = Object.freeze({
  * @return {String}
  */
 function toArabic(japanese) {
-    return '';
+    return _toArabic('', japanese, 0);
+
+    function _toArabic(result, j, digit) {
+        const len = j.length;
+        if (len === digit) {
+            return result;
+        }
+        return _toArabic(J2A[j[len - digit - 1]] + result, j, digit + 1);
+    }
 }
 
 
