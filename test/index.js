@@ -14,6 +14,9 @@ describe('JapaneseNumbers', () => {
         it('should be return 6000053124710 when given 六兆五千三百十二万四千七百十', () => {
             assert.equal(toArabic('六兆五千三百十二万四千七百十'), '6000053124710');
         });
+        it('should be return 1111111111111111 when given 千百十一兆千百十一億千百十一万千百十一', () => {
+            assert.equal(toArabic('千百十一兆千百十一億千百十一万千百十一'), '1111111111111111');
+        });
     });
 });
 
