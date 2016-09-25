@@ -13,10 +13,10 @@ describe('JapaneseNumbers', () => {
             assert.equal(toArabic('十'), '10');
             assert.equal(toArabic('百'), '100');
             assert.equal(toArabic('千'), '1000');
-            assert.equal(toArabic('万'), '10000');
-            assert.equal(toArabic('億'), '100000000');
-            assert.equal(toArabic('兆'), '1000000000000');
-            assert.equal(toArabic('京'), '10000000000000000');
+            assert.equal(toArabic('一万'), '10000');
+            assert.equal(toArabic('一億'), '100000000');
+            assert.equal(toArabic('一兆'), '1000000000000');
+            assert.equal(toArabic('一京'), '10000000000000000');
         });
     });
     describe('#toJapanese', () => {
