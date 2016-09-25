@@ -17,6 +17,7 @@ describe('JapaneseNumbers', () => {
             assert.equal(toArabic('一億'), '100000000');
             assert.equal(toArabic('一兆'), '1000000000000');
             assert.equal(toArabic('一京'), '10000000000000000');
+            assert.equal(toArabic('一無量大数'), '100000000000000000000000000000000000000000000000000000000000000000000');
         });
     });
     describe('#toJapanese', () => {
@@ -32,6 +33,7 @@ describe('JapaneseNumbers', () => {
             assert.equal(toJapanese('100000000'), '一億');
             assert.equal(toJapanese('1000000000000'), '一兆');
             assert.equal(toJapanese('10000000000000000'), '一京');
+            assert.equal(toJapanese('100000000000000000000000000000000000000000000000000000000000000000000'), '一無量大数');
         });
     });
 });
