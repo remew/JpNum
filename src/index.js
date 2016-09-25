@@ -7,7 +7,7 @@ module.exports = {
     toJapanese
 };
 
-const nums = Object.freeze({
+const jpNums = Object.freeze({
     '零': '0',
     '〇': '0',
     '一': '1',
@@ -23,6 +23,18 @@ const nums = Object.freeze({
     '七': '7',
     '八': '8',
     '九': '9',
+});
+
+const arNums = Object.freeze({
+    '1': '一',
+    '2': '二',
+    '3': '三',
+    '4': '四',
+    '5': '五',
+    '6': '六',
+    '7': '七',
+    '8': '八',
+    '9': '九',
 });
 
 const digits = Object.freeze([
@@ -59,7 +71,48 @@ const factors = Object.freeze([
  * @return {String}
  */
 function toJapanese(num) {
-    return '';
+    if (num < 0) {
+        throw new Error(`${num} is too much smaller`);
+    }
+    if (num.length > factors[factors.length - 1].a.length + 3) {
+        throw new Error(`${num} is too much bigger`);
+    }
+    const numArray = [...num];
+    const fourArray = [];
+    while (numArray.length) {
+        fourArray.push(pop4(numArray));
+    }
+    return fourArray.reduce((result, f, i) => {
+        if (i === 0) {
+            return result + join(f[0], f[1], f[2], f[3], '');
+        }
+        return join(f[0], f[1], f[2], f[3], factors[i - 1].j) + result;
+    }, '');
+
+    function pop4(array) {
+        const result = [];
+        for (let i = 0; i < 4; i++) {
+            result.unshift(array.pop() || '0');
+        }
+        return result;
+    }
+    function join(_a, _b, _c, _d, unit) {
+        const a = joinUnit(_a, '千');
+        const b = joinUnit(_b, '百');
+        const c = joinUnit(_c, '十');
+        const d = joinUnit(_d, '', true);
+        const joined = a + b + c + d;
+        return joined !== '' ? a + b + c + d + unit : '';
+        function joinUnit(num, unit, isLast = false) {
+            if (num === '0') {
+                return '';
+            }
+            if (num === '1') {
+                return isLast ? '一' : unit;
+            }
+            return arNums[num] + unit;
+        }
+    }
 }
 
 /**
@@ -77,7 +130,7 @@ function toArabic(japanese) {
         })
         .reduce((result, numInfo) => {
             const num = numInfo.items.reduce((result, numInfo) => {
-                return add(result, mul(nums[numInfo.num], numInfo.factor));
+                return add(result, mul(jpNums[numInfo.num], numInfo.factor));
             }, '0');
             return add(result, mul(num, numInfo.factor));
         }, '0');
