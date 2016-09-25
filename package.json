@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/remew/JapaneseNumbers.git"
   },
-  "keywords": [],
+  "keywords": ["JapaneseNumbers", "JapaneseNumerals"],
   "author": "remew",
   "license": "MIT",
   "bugs": {
