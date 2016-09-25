@@ -3,7 +3,8 @@
 const {add, mul} = require('./calc');
 
 module.exports = {
-    toArabic
+    toArabic,
+    toJapanese
 };
 
 const nums = Object.freeze({
@@ -51,6 +52,15 @@ const factors = Object.freeze([
     {j: '不可思議', a: '10000000000000000000000000000000000000000000000000000000000000000'},
     {j: '無量大数', a: '100000000000000000000000000000000000000000000000000000000000000000000'},
 ]);
+
+/**
+ * Convert to Japanese numbers from Arabic numbers.
+ * @param {String} num - natural arabic numbers
+ * @return {String}
+ */
+function toJapanese(num) {
+    return '';
+}
 
 /**
  * Convert to Arabic numbers from Japanese numbers.
