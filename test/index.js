@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require('assert');
-const {toArabic} = require('../');
+const {toArabic, toJapanese} = require('../');
 
 describe('JapaneseNumbers', () => {
     describe('#toArabic', () => {
@@ -16,6 +16,11 @@ describe('JapaneseNumbers', () => {
         });
         it('should be return 1111111111111111 when given 千百十一兆千百十一億千百十一万千百十一', () => {
             assert.equal(toArabic('千百十一兆千百十一億千百十一万千百十一'), '1111111111111111');
+        });
+    });
+    describe('#toJapanese', () => {
+        it('should be return 四十二 when given 42', () => {
+            assert.equal(toJapanese('42'), '四十二');
         });
     });
 });
