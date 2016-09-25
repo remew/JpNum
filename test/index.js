@@ -28,10 +28,10 @@ describe('JapaneseNumbers', () => {
             assert.equal(toJapanese('10'), '十');
             assert.equal(toJapanese('100'), '百');
             assert.equal(toJapanese('1000'), '千');
-            assert.equal(toJapanese('10000'), '万');
-            assert.equal(toJapanese('100000000'), '億');
-            assert.equal(toJapanese('1000000000000'), '兆');
-            assert.equal(toJapanese('10000000000000000'), '京');
+            assert.equal(toJapanese('10000'), '一万');
+            assert.equal(toJapanese('100000000'), '一億');
+            assert.equal(toJapanese('1000000000000'), '一兆');
+            assert.equal(toJapanese('10000000000000000'), '一京');
         });
     });
 });
