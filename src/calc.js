@@ -1,8 +1,14 @@
 'use strict';
 
+/**
+ * Add a and b
+ * @param {String|int} a
+ * @param {String|int} b
+ * @return {String}
+ */
 function add(a, b) {
-    a = [...a].reverse();
-    b = [...b].reverse();
+    a = [...(a.toString())].reverse();
+    b = [...(b.toString())].reverse();
     const ans = [];
     const len = a.length < b.length ? b.length : a.length;
     let up = 0;
