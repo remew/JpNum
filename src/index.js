@@ -1,6 +1,7 @@
 'use strict';
 
 const {add, mul} = require('./calc');
+const reverse = require('./reverse');
 
 module.exports = {
     toArabic,
@@ -134,11 +135,6 @@ function toArabic(japanese) {
             }, '0');
             return add(result, mul(num, numInfo.factor));
         }, '0');
-}
-
-// immutable reverse
-function reverse(array) {
-    return Array.from(array).reverse();
 }
 
 function findFactor(str, factor) {
