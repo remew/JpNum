@@ -17,11 +17,16 @@ describe('calc.js', () => {
         });
     });
     describe('#mul', () => {
-        it('multi given two argument', () => {
+        it('multiplication given two argument', () => {
             assert.equal(mul('2', '21'), '42');
             assert.equal(mul('11', '11'), '121');
             assert.equal(mul('9793', '3279'), '32111247');
             assert.equal(mul('141592653589793', '238462643383279'), '33764558458674967278141271247');
+        });
+        it('work if given integer', () => {
+            assert.equal(mul(9793, '3279'), '32111247');
+            assert.equal(mul('9793', 3279), '32111247');
+            assert.equal(mul(9793, 3279), '32111247');
         });
     });
 });
