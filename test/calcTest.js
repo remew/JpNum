@@ -4,7 +4,7 @@ const assert = require('assert');
 const {add, mul} = require('../src/calc');
 
 describe('calc.js', () => {
-    describe('add', () => {
+    describe('#add', () => {
         it('should be return 42 when given 10 and 32', () => {
             assert.equal(add('10', '32'), '42');
         });
@@ -15,7 +15,7 @@ describe('calc.js', () => {
             assert.equal(add('99', '1'), '100');
         });
     });
-    describe('mul', () => {
+    describe('#mul', () => {
         it('should be return 42 when given 2 and 21', () => {
             assert.equal(mul('2', '21'), '42');
         });
