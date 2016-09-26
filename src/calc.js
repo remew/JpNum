@@ -38,7 +38,7 @@ function mul(a, b) {
     const ans = [];
     for (let i = 0; i < oLen; i++) {
         const num = parseInt(outer[i]);
-        const line = Array.from({length: i}, _ => '0');
+        const line = Array.from({length: i}, () => '0');
         let carry = 0;
         for (let j = 0; j < iLen; j++) {
             const tmpAns = num * parseInt(inner[j]) + carry;
