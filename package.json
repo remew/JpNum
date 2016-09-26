@@ -4,7 +4,7 @@
   "description": "Converts between Arabic numbers and Japanese numbers (it is called 漢数字).",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/index.js"
+    "test": "eslint src/**/*.js test/**/*.js && mocha test/index.js"
   },
   "repository": {
     "type": "git",
