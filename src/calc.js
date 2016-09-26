@@ -1,8 +1,14 @@
 'use strict';
 
+/**
+ * Add a and b
+ * @param {String|int} a
+ * @param {String|int} b
+ * @return {String}
+ */
 function add(a, b) {
-    a = [...a].reverse();
-    b = [...b].reverse();
+    a = [...(a.toString())].reverse();
+    b = [...(b.toString())].reverse();
     const ans = [];
     const len = a.length < b.length ? b.length : a.length;
     let up = 0;
@@ -17,9 +23,15 @@ function add(a, b) {
     return ans.reverse().join('');
 }
 
+/**
+ * Multiplication a and b
+ * @param {String|int} a
+ * @param {String|int} b
+ * @return {String}
+ */
 function mul(a, b) {
-    a = [...a].reverse();
-    b = [...b].reverse();
+    a = [...(a.toString())].reverse();
+    b = [...(b.toString())].reverse();
     const [outer, inner] = a.length < b.length ? [a, b] : [b, a];
     const oLen = outer.length;
     const iLen = inner.length;

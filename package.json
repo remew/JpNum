@@ -1,10 +1,10 @@
 {
-  "name": "JapaneseNumbers",
-  "version": "0.0.0",
+  "name": "japanese-numbers",
+  "version": "0.0.1",
   "description": "Converts between Arabic numbers and Japanese numbers (it is called 漢数字).",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test/index.js"
   },
   "repository": {
     "type": "git",
