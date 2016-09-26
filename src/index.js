@@ -148,7 +148,7 @@ function findFactor(str, factor) {
 
 function separateByFactors(str, factors) {
     // find from bigger factor
-    const result = reverse(factors).reduce((result, factor, i) => {
+    const result = reverse(factors).reduce((result, factor) => {
         const info = findFactor(str, factor.j);
         if (info === null) {
             return result;
