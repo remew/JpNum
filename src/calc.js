@@ -23,9 +23,15 @@ function add(a, b) {
     return ans.reverse().join('');
 }
 
+/**
+ * Multiplication a and b
+ * @param {String|int} a
+ * @param {String|int} b
+ * @return {String}
+ */
 function mul(a, b) {
-    a = [...a].reverse();
-    b = [...b].reverse();
+    a = [...(a.toString())].reverse();
+    b = [...(b.toString())].reverse();
     const [outer, inner] = a.length < b.length ? [a, b] : [b, a];
     const oLen = outer.length;
     const iLen = inner.length;
