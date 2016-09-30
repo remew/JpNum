@@ -1,22 +1,22 @@
 {
-  "name": "japanese-numbers",
+  "name": "jp-num",
   "version": "0.0.1",
-  "description": "Converts between Arabic numbers and Japanese numbers (it is called 漢数字).",
+  "description": "Converts between Arabic numerals and Japanese numerals (it is called 漢数字).",
   "main": "index.js",
   "scripts": {
     "test": "eslint src/**/*.js test/**/*.js && mocha test/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/remew/JapaneseNumbers.git"
+    "url": "git+https://github.com/remew/JpNum.git"
   },
-  "keywords": ["JapaneseNumbers", "JapaneseNumerals"],
+  "keywords": ["Japanese Numbers", "Japanese Numerals"],
   "author": "remew",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/remew/JapaneseNumbers/issues"
+    "url": "https://github.com/remew/JpNum/issues"
   },
-  "homepage": "https://github.com/remew/JapaneseNumbers#readme",
+  "homepage": "https://github.com/remew/JpNum#readme",
   "devDependencies": {
     "eslint": "^3.5.0",
     "mocha": "^3.0.2"
