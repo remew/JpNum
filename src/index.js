@@ -78,7 +78,7 @@ function toJapanese(num) {
     if (num.length > factors[factors.length - 1].a.length + 3) {
         throw new Error(`${num} is too much bigger`);
     }
-    const numArray = [...num];
+    const numArray = Array.from(num);
     const fourArray = [];
     while (numArray.length) {
         fourArray.push(pop4(numArray));
