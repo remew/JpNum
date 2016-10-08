@@ -7,8 +7,8 @@
  * @return {String}
  */
 function add(a, b) {
-    a = [...(a.toString())].reverse();
-    b = [...(b.toString())].reverse();
+    a = Array.from(a.toString()).reverse();
+    b = Array.from(b.toString()).reverse();
     const ans = [];
     const len = a.length < b.length ? b.length : a.length;
     let up = 0;
@@ -30,8 +30,8 @@ function add(a, b) {
  * @return {String}
  */
 function mul(a, b) {
-    a = [...(a.toString())].reverse();
-    b = [...(b.toString())].reverse();
+    a = Array.from(a.toString()).reverse();
+    b = Array.from(b.toString()).reverse();
     const [outer, inner] = a.length < b.length ? [a, b] : [b, a];
     const oLen = outer.length;
     const iLen = inner.length;

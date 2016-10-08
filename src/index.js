@@ -27,6 +27,7 @@ const jpNums = Object.freeze({
 });
 
 const arNums = Object.freeze({
+    '0': '零',
     '1': '一',
     '2': '二',
     '3': '三',
@@ -78,7 +79,10 @@ function toJapanese(num) {
     if (num.length > factors[factors.length - 1].a.length + 3) {
         throw new Error(`${num} is too much bigger`);
     }
-    const numArray = [...num];
+    if (num === '0') {
+        return arNums['0'];
+    }
+    const numArray = Array.from(num);
     const fourArray = [];
     while (numArray.length) {
         fourArray.push(pop4(numArray));
