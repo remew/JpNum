@@ -1,4 +1,6 @@
 'use strict';
 
-module.exports = require('./src');
-
+module.exports = {
+    toArabic: require('./toArabic'),
+    toJapanese: require('./toJapanese'),
+};
