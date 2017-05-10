@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require('assert');
-const {add, mul} = require('../src/calc');
+const {add, mul} = require('../lib/calc');
 
 describe('calc.js', () => {
     describe('#add', () => {
