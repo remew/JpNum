@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require('assert');
-const reverse = require('../src/reverse');
+const reverse = require('../lib/reverse');
 
 describe('reverse.js', () => {
     beforeEach(() => {
@@ -16,4 +16,3 @@ describe('reverse.js', () => {
         });
     });
 });
-
